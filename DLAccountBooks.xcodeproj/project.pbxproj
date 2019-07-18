@@ -36,6 +36,7 @@
 		0A01FD9722E045250009CB55 /* UIColor+DLMethodExtension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIColor+DLMethodExtension.m"; sourceTree = "<group>"; };
 		0A01FD9922E05B560009CB55 /* UIColor+DLThemeColor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIColor+DLThemeColor.h"; sourceTree = "<group>"; };
 		0A01FD9A22E05B560009CB55 /* UIColor+DLThemeColor.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIColor+DLThemeColor.m"; sourceTree = "<group>"; };
+		0AEEFBFE22E0661800C62F28 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +53,7 @@
 		0A01FD5D22DFFEC10009CB55 = {
 			isa = PBXGroup;
 			children = (
+				0AEEFBFE22E0661800C62F28 /* README.md */,
 				0A01FD6822DFFEC10009CB55 /* DLAccountBooks */,
 				0A01FD6722DFFEC10009CB55 /* Products */,
 			);
