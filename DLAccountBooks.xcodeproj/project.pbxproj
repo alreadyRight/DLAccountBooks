@@ -15,6 +15,7 @@
 		0A01FD8E22E000EB0009CB55 /* DLMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A01FD8D22E000EB0009CB55 /* DLMainViewController.m */; };
 		0A01FD9822E045250009CB55 /* UIColor+DLMethodExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A01FD9722E045250009CB55 /* UIColor+DLMethodExtension.m */; };
 		0A01FD9B22E05B560009CB55 /* UIColor+DLThemeColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A01FD9A22E05B560009CB55 /* UIColor+DLThemeColor.m */; };
+		0AEEFC0122E073A800C62F28 /* DLNavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AEEFC0022E073A800C62F28 /* DLNavigationViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +38,8 @@
 		0A01FD9922E05B560009CB55 /* UIColor+DLThemeColor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIColor+DLThemeColor.h"; sourceTree = "<group>"; };
 		0A01FD9A22E05B560009CB55 /* UIColor+DLThemeColor.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIColor+DLThemeColor.m"; sourceTree = "<group>"; };
 		0AEEFBFE22E0661800C62F28 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		0AEEFBFF22E073A800C62F28 /* DLNavigationViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DLNavigationViewController.h; sourceTree = "<group>"; };
+		0AEEFC0022E073A800C62F28 /* DLNavigationViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DLNavigationViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -150,6 +153,8 @@
 			children = (
 				0A01FD8722E0003C0009CB55 /* DLBaseViewController.h */,
 				0A01FD8822E0003C0009CB55 /* DLBaseViewController.m */,
+				0AEEFBFF22E073A800C62F28 /* DLNavigationViewController.h */,
+				0AEEFC0022E073A800C62F28 /* DLNavigationViewController.m */,
 			);
 			path = SuperBaseControllers;
 			sourceTree = "<group>";
@@ -254,6 +259,7 @@
 				0A01FD8E22E000EB0009CB55 /* DLMainViewController.m in Sources */,
 				0A01FD6B22DFFEC10009CB55 /* AppDelegate.m in Sources */,
 				0A01FD9822E045250009CB55 /* UIColor+DLMethodExtension.m in Sources */,
+				0AEEFC0122E073A800C62F28 /* DLNavigationViewController.m in Sources */,
 				0A01FD8922E0003C0009CB55 /* DLBaseViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

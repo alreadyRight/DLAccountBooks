@@ -21,7 +21,7 @@
 }
 
 - (void)setupBaseUI{
-	self.view.backgroundColor = [UIColor whiteColor];
+	self.view.backgroundColor = [UIColor viewBgColor];
 	[self setupCustomUI];
 }
 

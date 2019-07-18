@@ -6,6 +6,8 @@
 //  Copyright © 2019 周冰烽. All rights reserved.
 //
 
+#define dl_app_theme [[NSUserDefaults standardUserDefaults] objectForKey:@"theme"]
+
 #define dlDeviceBounds [UIScreen mainScreen].bounds
 
 #define dlDeviceWidth [UIScreen mainScreen].bounds.size.width

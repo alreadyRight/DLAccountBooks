@@ -1,5 +1,5 @@
 //
-//  UIColor+DLThemeColor.h
+//  DLNavigationViewController.h
 //  DLAccountBooks
 //
 //  Created by 周冰烽 on 2019/7/18.
@@ -10,13 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface UIColor (DLThemeColor)
-
-+ (instancetype)tabNormalColor;
-
-+ (instancetype)viewBgColor;
-
-+ (instancetype)tabSelectedColor;
+@interface DLNavigationViewController : UINavigationController
 
 @end
 
