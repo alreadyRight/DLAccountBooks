@@ -42,6 +42,8 @@
 - (void)viewDidLoad{
 	[super viewDidLoad];
 	self.view.backgroundColor = [UIColor viewBgColor];
+	[self addChildVCWithTitle:@"今日记账" clsName:@"DLTodayAccountController"];
+	[self addChildVCWithTitle:@"账单统计" clsName:@"DLStatisticalAccountViewController"];
 }
 
 
@@ -49,27 +51,32 @@
  UITabbarController添加子控制器的方法封装,以及子控制器设置
 
  @param title 子控制器标题
- @param image tabbar_normal_image
- @param selectImage tabbar_selecte_image
- @param class 子控制器类
+ @param clsName 子控制器类名称
  */
-- (void) setupChildVcWithTitle:(NSString *)title image:(NSString *)image selectImage:(NSString *)selectImage class:(Class)class {
+- (void)addChildVCWithTitle:(NSString *)title clsName:(NSString *)clsName {
+	// 初始化控制器
+	Class cls = NSClassFromString(clsName);
+	DLBaseViewController *vc;
+	// 判断类型是否可以强转
+	if ([[[cls alloc]init] isKindOfClass:[DLBaseViewController class]]) {
+		vc = [[cls alloc]init];
+	}else{
+		// 断言强转失败
+		NSAssert([[[cls alloc]init] isKindOfClass:[DLBaseViewController class]], @"强制类型转换失败");
+	}
 	
-	//初始化控制器
-	DLBaseViewController *cls = [[DLBaseViewController alloc]init];
+	//给子控制器的tabbar属性赋值
+	vc.title = title;
 	
-	//每个子控制器的tabBarItem设置
-	cls.tabBarItem.title = title;
+	vc.tabBarItem.image = [UIImage imageNamed:[NSString stringWithFormat:@"tabbar_%@",clsName]];
 	
-	cls.tabBarItem.image = [UIImage imageNamed:image];
-	
-	cls.tabBarItem.selectedImage = [UIImage imageNamed:selectImage];
+	vc.tabBarItem.selectedImage = [UIImage imageNamed:[NSString stringWithFormat:@"tabbar_%@_selected",clsName]];
 	
 	//包装一个导航控制器,添加导航控制器为tabBarController的子控制器
-	DLNavigationViewController *naviVC = [[DLNavigationViewController alloc]initWithRootViewController:cls];
+	DLNavigationViewController *naviVC = [[DLNavigationViewController alloc]initWithRootViewController:vc];
 	
-	//添加到self
 	[self addChildViewController:naviVC];
+	
 }
 
 @end
