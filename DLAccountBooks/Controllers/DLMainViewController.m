@@ -56,22 +56,17 @@
 - (void)addChildVCWithTitle:(NSString *)title clsName:(NSString *)clsName {
 	// 初始化控制器
 	Class cls = NSClassFromString(clsName);
-	DLBaseViewController *vc;
-	// 判断类型是否可以强转
-	if ([[[cls alloc]init] isKindOfClass:[DLBaseViewController class]]) {
-		vc = [[cls alloc]init];
-	}else{
-		// 断言强转失败
-		NSAssert([[[cls alloc]init] isKindOfClass:[DLBaseViewController class]], @"强制类型转换失败");
-	}
+	// 断言强转是否成功,成功继续执行,失败则抛出异常
+	NSAssert([cls isSubclassOfClass:[DLBaseViewController class]], @"强制类型转换失败");
+	DLBaseViewController *vc = [[cls alloc]init];
 	
 	//给子控制器的tabbar属性赋值
 	vc.title = title;
-	
+
 	vc.tabBarItem.image = [UIImage imageNamed:[NSString stringWithFormat:@"tabbar_%@",clsName]];
-	
+
 	vc.tabBarItem.selectedImage = [UIImage imageNamed:[NSString stringWithFormat:@"tabbar_%@_selected",clsName]];
-	
+
 	//包装一个导航控制器,添加导航控制器为tabBarController的子控制器
 	DLNavigationViewController *naviVC = [[DLNavigationViewController alloc]initWithRootViewController:vc];
 	
